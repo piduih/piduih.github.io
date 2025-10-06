@@ -7,12 +7,88 @@
   <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
   <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
   <style>
-    body { font-family: Arial, sans-serif; margin: 0; background: #f6f6f6; }
-    .container { max-width: 700px; margin: 40px auto; background: #fff; border-radius: 10px; padding: 30px; box-shadow: 0 4px 18px #0001; }
-    .btn { background: #3b398f; color: #fff; padding: 10px 25px; margin: 14px 6px; border-radius: 6px; text-decoration: none; }
-    .links a { margin-right: 12px; }
-    ul { padding-left: 18px; }
-    .highlight { color: #8b94ff; font-weight: bold; }
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0; 
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      color: #fff;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 40px 20px;
+    }
+    .container {
+      background: #1c1b29;
+      border-radius: 15px;
+      padding: 40px 30px;
+      max-width: 700px;
+      box-shadow: 0 8px 30px rgba(114, 85, 246, 0.7);
+      text-align: center;
+    }
+    h1 {
+      font-weight: 700;
+      font-size: 2.8rem;
+      margin-bottom: 10px;
+      letter-spacing: 1.5px;
+    }
+    p.lead {
+      font-size: 1.25rem;
+      margin-bottom: 30px;
+      line-height: 1.6;
+      color: #b9a9ff;
+    }
+    h2 {
+      color: #a892ff;
+      margin-bottom: 20px;
+      font-weight: 600;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 30px;
+      text-align: left;
+    }
+    ul li::before {
+      content: "✓";
+      margin-right: 10px;
+      color: #9e7eff;
+      font-weight: bold;
+    }
+    ul li {
+      padding: 8px 0;
+      font-size: 1.1rem;
+      border-bottom: 1px solid #3a3571;
+    }
+    .links {
+      margin-bottom: 30px;
+    }
+    .btn {
+      display: inline-block;
+      background: #7f69f4;
+      color: white;
+      padding: 12px 28px;
+      margin: 8px 10px;
+      border-radius: 30px;
+      font-weight: 600;
+      font-size: 1rem;
+      text-decoration: none;
+      box-shadow: 0 5px 15px rgba(127, 105, 244, 0.6);
+      transition: background 0.3s ease;
+    }
+    .btn:hover {
+      background: #9e89ff;
+      box-shadow: 0 8px 22px rgba(158, 137, 255, 0.9);
+    }
+    footer {
+      font-size: 0.88rem;
+      color: #6c63ff;
+      letter-spacing: 1.3px;
+    }
+    strong {
+      color: #d0caff;
+      font-weight: 700;
+    }
   </style>
 </head>
 <body>
@@ -21,41 +97,41 @@
     const App = () => (
       React.createElement('div', { className: 'container' }, [
         React.createElement('h1', null, 'Piduih | Creative Digital Solutions'),
-        React.createElement('p', null, [
-          'Transformasikan jenama anda dengan solusi kreatif: ',
-          React.createElement('span', { className: 'highlight' }, 'Web Design'),
-          ', ',
-          React.createElement('span', { className: 'highlight' }, 'Graphic Design'),
-          ', ',
-          React.createElement('span', { className: 'highlight' }, 'Print Solution'),
-          ', ',
-          React.createElement('span', { className: 'highlight' }, 'Photography'),
-          ' & ',
-          React.createElement('span', { className: 'highlight' }, 'Branding'),
-          ' berkualiti tinggi.'
-        ]),
-        React.createElement('h2', null, 'Perkhidmatan'),
+        React.createElement('p', { className: 'lead' },
+          'Transformasikan jenama anda dengan solusi kreatif: ', 
+          React.createElement('strong', null, 'Web Design'), ', ', 
+          React.createElement('strong', null, 'Graphic Design'), ', ', 
+          React.createElement('strong', null, 'Print Solution'), ', ', 
+          React.createElement('strong', null, 'Photography'), ' & ', 
+          React.createElement('strong', null, 'Branding'), ' berkualiti tinggi.'
+        ),
+        React.createElement('h2', null, 'Perkhidmatan Kami'),
         React.createElement('ul', null, [
-          React.createElement('li', null, 'Reka bentuk grafik profesional & identiti visual'),
-          React.createElement('li', null, 'Penyelesaian cetakan (kad bisnes, brosur, banner)'),
-          React.createElement('li', null, 'Web design & UI/UX moden'),
-          React.createElement('li', null, 'Fotografi kreatif & produk'),
-          React.createElement('li', null, 'Strategi & pembangunan jenama'),
-          React.createElement('li', null, 'eKad & jemputan digital')
+          React.createElement('li', { key: 1 }, 'Reka bentuk grafik profesional & identiti visual'),
+          React.createElement('li', { key: 2 }, 'Penyelesaian cetakan (kad bisnes, brosur, banner)'),
+          React.createElement('li', { key: 3 }, 'Web design & UI/UX moden'),
+          React.createElement('li', { key: 4 }, 'Fotografi kreatif & produk'),
+          React.createElement('li', { key: 5 }, 'Strategi & pembangunan jenama'),
+          React.createElement('li', { key: 6 }, 'eKad & jemputan digital'),
         ]),
         React.createElement('div', { className: 'links' }, [
-          React.createElement('a', { className: 'btn', href: 'https://afiladesign.com/v5/#portfolio', target: '_blank' }, 'Lihat Portfolio'),
-          React.createElement('a', { className: 'btn', href: 'https://afiladesign.com/v5/#services', target: '_blank' }, 'Perkhidmatan'),
-          React.createElement('a', { className: 'btn', href: 'https://afiladesign.com/v5/projects.html', target: '_blank' }, 'Projek IT'),
-          React.createElement('a', { className: 'btn', href: 'https://afiladesign.com/v5/#about', target: '_blank' }, 'Tentang Saya'),
-          React.createElement('a', { className: 'btn', href: 'https://afiladesign.com/v5/#contact', target: '_blank' }, 'Hubungi'),
-          React.createElement('a', { className: 'btn', href: 'https://wa.me/60194617217?text=Hi%20Afila%20Design!%20Saya%20berminat%20dengan%20design%20services%20anda.', target: '_blank' }, 'WhatsApp'),
+          React.createElement('a', { key: 'portfolio', href: 'https://afiladesign.com/v5/#portfolio', target: '_blank', className: 'btn' }, 'Lihat Portfolio'),
+          React.createElement('a', { key: 'services', href: 'https://afiladesign.com/v5/#services', target: '_blank', className: 'btn' }, 'Perkhidmatan'),
+          React.createElement('a', { key: 'projects', href: 'https://afiladesign.com/v5/projects.html', target: '_blank', className: 'btn' }, 'Projek IT'),
+          React.createElement('a', { key: 'about', href: 'https://afiladesign.com/v5/#about', target: '_blank', className: 'btn' }, 'Tentang Saya'),
+          React.createElement('a', { key: 'contact', href: 'https://afiladesign.com/v5/#contact', target: '_blank', className: 'btn' }, 'Hubungi'),
+          React.createElement('a', { key: 'whatsapp', href: 'https://wa.me/60194617217?text=Hi%20Afila%20Design!%20Saya%20berminat%20dengan%20design%20services%20anda.', target: '_blank', className: 'btn' }, 'WhatsApp'),
         ]),
-        React.createElement('p', { style: { marginTop: 28 } },
+        React.createElement('p', null,
           React.createElement('strong', null, '50+'), ' projek siap • ',
           React.createElement('strong', null, '30+'), ' klien gembira • ',
           React.createElement('strong', null, '5+ tahun pengalaman'), ' • ',
           React.createElement('strong', null, '100% kepuasan pelanggan')
         ),
-        React.createElement('footer', { style: { marginTop: 32, color: '#888' } }, '© 2025 Piduih / Afila Design')
+        React.createElement('footer', null, '© 2025 Piduih / Afila Design')
       ])
+    );
+    ReactDOM.createRoot(document.getElementById('root')).render(React.createElement(App));
+  </script>
+</body>
+</html>
