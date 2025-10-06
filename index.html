@@ -1,45 +1,66 @@
 <!DOCTYPE html>
 <html lang="ms">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Piduih • Creative Digital Solutions</title>
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
   <style>
     body { font-family: Arial, sans-serif; margin: 0; background: #f6f6f6; }
     .container { max-width: 700px; margin: 40px auto; background: #fff; border-radius: 10px; padding: 30px; box-shadow: 0 4px 18px #0001; }
-    h1 { color: #3b398f; }
-    .btn { display: inline-block; background: #3b398f; color: #fff; padding: 10px 25px; margin: 14px 6px; border-radius: 6px; text-decoration: none; }
+    .btn { background: #3b398f; color: #fff; padding: 10px 25px; margin: 14px 6px; border-radius: 6px; text-decoration: none; }
     .links a { margin-right: 12px; }
     ul { padding-left: 18px; }
     .highlight { color: #8b94ff; font-weight: bold; }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>Piduih | Creative Digital Solutions</h1>
-    <p>Transformasikan jenama anda dengan solusi kreatif: <span class="highlight">Web Design</span>, <span class="highlight">Graphic Design</span>, <span class="highlight">Print Solution</span>, <span class="highlight">Photography</span> & <span class="highlight">Branding</span> berkualiti tinggi.</p>
-
-    <h2>Perkhidmatan</h2>
-    <ul>
-      <li>Reka bentuk grafik profesional & identiti visual</li>
-      <li>Penyelesaian cetakan (kad bisnes, brosur, banner)</li>
-      <li>Web design & UI/UX moden</li>
-      <li>Fotografi kreatif & produk</li>
-      <li>Strategi & pembangunan jenama</li>
-      <li>eKad & jemputan digital</li>
-    </ul>
-    <div class="links">
-      <a class="btn" href="https://afiladesign.com/v5/#portfolio" target="_blank">Lihat Portfolio</a>
-      <a class="btn" href="https://afiladesign.com/v5/#services" target="_blank">Perkhidmatan</a>
-      <a class="btn" href="https://afiladesign.com/v5/projects.html" target="_blank">Projek IT</a>
-      <a class="btn" href="https://afiladesign.com/v5/#about" target="_blank">Tentang Saya</a>
-      <a class="btn" href="https://afiladesign.com/v5/#contact" target="_blank">Hubungi</a>
-      <a class="btn" href="https://wa.me/60194617217?text=Hi%20Afila%20Design!%20Saya%20berminat%20dengan%20design%20services%20anda." target="_blank">WhatsApp</a>
-    </div>
-    <p style="margin-top:28px;">
-      <strong>50+</strong> projek siap • <strong>30+</strong> klien gembira • <strong>5+ tahun pengalaman</strong> • <strong>100% kepuasan pelanggan</strong>
-    </p>
-    <footer style="margin-top:32px; color:#888;">&copy; 2025 Piduih / Afila Design</footer>
-  </div>
+  <div id="root"></div>
+  <script type="text/javascript">
+    const App = () => (
+      React.createElement('div', { className: 'container' }, [
+        React.createElement('h1', null, 'Piduih | Creative Digital Solutions'),
+        React.createElement('p', null, [
+          'Transformasikan jenama anda dengan solusi kreatif: ',
+          React.createElement('span', { className: 'highlight' }, 'Web Design'),
+          ', ',
+          React.createElement('span', { className: 'highlight' }, 'Graphic Design'),
+          ', ',
+          React.createElement('span', { className: 'highlight' }, 'Print Solution'),
+          ', ',
+          React.createElement('span', { className: 'highlight' }, 'Photography'),
+          ' & ',
+          React.createElement('span', { className: 'highlight' }, 'Branding'),
+          ' berkualiti tinggi.'
+        ]),
+        React.createElement('h2', null, 'Perkhidmatan'),
+        React.createElement('ul', null, [
+          React.createElement('li', null, 'Reka bentuk grafik profesional & identiti visual'),
+          React.createElement('li', null, 'Penyelesaian cetakan (kad bisnes, brosur, banner)'),
+          React.createElement('li', null, 'Web design & UI/UX moden'),
+          React.createElement('li', null, 'Fotografi kreatif & produk'),
+          React.createElement('li', null, 'Strategi & pembangunan jenama'),
+          React.createElement('li', null, 'eKad & jemputan digital')
+        ]),
+        React.createElement('div', { className: 'links' }, [
+          React.createElement('a', { className: 'btn', href: 'https://afiladesign.com/v5/#portfolio', target: '_blank' }, 'Lihat Portfolio'),
+          React.createElement('a', { className: 'btn', href: 'https://afiladesign.com/v5/#services', target: '_blank' }, 'Perkhidmatan'),
+          React.createElement('a', { className: 'btn', href: 'https://afiladesign.com/v5/projects.html', target: '_blank' }, 'Projek IT'),
+          React.createElement('a', { className: 'btn', href: 'https://afiladesign.com/v5/#about', target: '_blank' }, 'Tentang Saya'),
+          React.createElement('a', { className: 'btn', href: 'https://afiladesign.com/v5/#contact', target: '_blank' }, 'Hubungi'),
+          React.createElement('a', { className: 'btn', href: 'https://wa.me/60194617217?text=Hi%20Afila%20Design!%20Saya%20berminat%20dengan%20design%20services%20anda.', target: '_blank' }, 'WhatsApp'),
+        ]),
+        React.createElement('p', { style: { marginTop: 28 } },
+          React.createElement('strong', null, '50+'), ' projek siap • ',
+          React.createElement('strong', null, '30+'), ' klien gembira • ',
+          React.createElement('strong', null, '5+ tahun pengalaman'), ' • ',
+          React.createElement('strong', null, '100% kepuasan pelanggan')
+        ),
+        React.createElement('footer', { style: { marginTop: 32, color: '#888' } }, '© 2025 Piduih / Afila Design')
+      ])
+    );
+    ReactDOM.createRoot(document.getElementById('root')).render(React.createElement(App));
+  </script>
 </body>
 </html>
